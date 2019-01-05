@@ -5,12 +5,13 @@ from wordvalue import load_words, calc_word_value, max_word_value
 
 TEST_WORDS = ('bob', 'julian', 'pybites', 'quit', 'barbeque')
 
+
 class TestWordValue(unittest.TestCase):
-    
+
     def test_load_words(self):
         words = load_words()
         self.assertEqual(len(words), 235886)
-        self.assertEqual(words[0], 'A')
+        self.assertEqual(words[1], 'a')
         self.assertEqual(words[-1], 'Zyzzogeton')
         self.assertNotIn(' ', ''.join(words))
 
@@ -24,5 +25,6 @@ class TestWordValue(unittest.TestCase):
         self.assertEqual(max_word_value(TEST_WORDS), 'barbeque')
         self.assertEqual(max_word_value(), 'benzalphenylhydrazone')
 
+
 if __name__ == "__main__":
-   unittest.main() 
+    unittest.main()
