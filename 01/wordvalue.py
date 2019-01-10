@@ -36,23 +36,23 @@ def max_word_value(words=None):
     max_word = ''
     if words == None:
         words = load_words()
-    max_word = [word for word in words if calc_word_value(word) > max_value]
-    # for word in words:
-    #     if calc_word_value(word) > max_value:
-    #         max_value = calc_word_value(word)
-    #         max_word = word
+    # max_word = [word for word in words if calc_word_value(word) > max_value]
+    for word in words:
+        if calc_word_value(word) > max_value:
+            max_value = calc_word_value(word)
+            max_word = word
     return max_word
 
 
 def max_test(x, m): return x if x > m else m
 
 
-def new_value(words):
-    max_value = 0
-    return(list[lambda x: max_test(calc_word_value(x), max_value), words])
+# def new_value(words):
+#     max_value = 0
+#     return(list[lambda x: max_test(calc_word_value(x), max_value), words])
 
 
 if __name__ == "__main__":
     # print(calc_word_value2("Doug"))
     lll = ['Doug', "sara", "Dianna"]
-    print(new_value(lll))
+    # print(new_value(lll))
