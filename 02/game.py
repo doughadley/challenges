@@ -13,7 +13,7 @@ NUM_LETTERS = 7
 def draw_letters():
     """Pick NUM_LETTERS letters randomly. Hint: use stdlib random"""
     letters = [distribution[random.randint(
-        0, 25)].name for x in range(1, NUM_LETTERS+1)]
+        0, 25)].name for x in range(, NUM_LETTERS)]
     return letters
 
 
